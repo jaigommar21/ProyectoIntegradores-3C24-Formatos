@@ -1,3 +1,23 @@
+\newcommand\tabularhead[1]{
+\begin{table}[h]
+  \caption{Action <<#1>>}
+  \begin{tabular}{|p{0.2\linewidth}|p{0.8\linewidth}|}
+    \hline
+    \textbf{Action} & \textbf{#1} \\
+    \hline}
+
+  \newcommand\addrow[2]{#1 &#2\\ \hline}
+
+  \newcommand\addmulrow[2]{ \begin{minipage}[t][][t]{2.5cm}#1\end{minipage}% 
+     &\begin{minipage}[t][][t]{8cm}
+      \begin{enumerate} #2   \end{enumerate}
+      \end{minipage}\\ }
+
+  \newenvironment{usecase}{\tabularhead}
+{\hline\end{tabular}\end{table}}
+
+
+
 \chapter{Caso de Usos del Sistema}
 
 En este apartado se identifican los actores y casos de usos del sistema, igualmente se describe 
@@ -48,5 +68,32 @@ A continuación de muestra la ejecución de los casos de uso del sistema agrupad
 \section{Especificaciones de alto nivel de los casos de uso del sistema}
 
 \section{Especificaciones detalladas de los casos de uso del sistema}
+
+A continuación se detalla los casos de usos del sistema:
+
+\begin{usecase}{Iniciar sesiónr}
+    \addrow{Actores}{ ........}
+    \addrow{Proposito}{ ........}
+    \addrow{Descripción}{ ........}
+    \addrow{Precondición}{ ........}
+
+    \addmulrow{Fujo Básico}{
+        \item Paso 1 \ldots
+                \item Paso 2 \ldots
+        \item Paso 3 \ldots}
+        
+    \hline
+         
+    \addmulrow{Fujo Alterno}{
+        \item Paso 1 \ldots
+                \item Paso 2 \ldots
+        \item Paso 3 \ldots}
+       
+    \hline
+           
+    \addrow{Posticondición}{ ........}
+    
+\end{usecase}
+
 
 \subsection{Especificaciones del caso de uso: CUS01 Iniciar Sesión}
