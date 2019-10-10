@@ -11,7 +11,7 @@
   \newcommand\addmulrow[2]{ \begin{minipage}[t][][t]{2.5cm}#1\end{minipage}% 
      &\begin{minipage}[t][][t]{8cm}
       \begin{enumerate} #2   \end{enumerate}
-      \end{minipage}\\ }
+      \end{minipage}\\  \hline}
 
   \newenvironment{usecase}{\tabularhead}
 {\hline\end{tabular}\end{table}}
@@ -81,20 +81,16 @@ A continuación se detalla los casos de usos del sistema:
     \addrow{Descripción}{ ........}
     \addrow{Precondición}{ ........}
 
-    \addmulrow{Fujo Básico}{
-        \item Paso 1 \ldots
-        \item Paso 2 \ldots
-        \item Paso 3 \ldots}
-        
-    \hline
-         
-    \addmulrow{Fujo Alterno}{
+    \addmulrow{Flujo Básico}{
         \item Paso 1 \ldots
         \item Paso 2 \ldots
         \item Paso 3 \ldots}
        
-    \hline
-           
+    \addmulrow{Flujo Alterno}{
+        \item Paso 1 \ldots
+        \item Paso 2 \ldots
+        \item Paso 3 \ldots}
+       
     \addrow{Posticondición}{ ........}
     
 \end{usecase}
